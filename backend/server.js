@@ -8,9 +8,13 @@ const errorHandler = require('./middleware/errorMiddleware');
 dotenv.config();
 connectDB();
 
+
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Backend is running 🚀');
+});
 
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/documents', require('./routes/documentRoutes'));
