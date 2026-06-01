@@ -94,7 +94,7 @@ const App: React.FC = () => {
     regRole: 'User',
     loginUser: '',
     loginPass: '',
-    apiBase: 'http://localhost:5000/api',
+    apiBase: 'https://backend1-axab.onrender.com/api',
   });
 
   const showNotification = useCallback((message: string, type: 'success' | 'error' | 'info') => {
